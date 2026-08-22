@@ -24,7 +24,7 @@ gh repo list | Select-String FsFileUtil
 # CD
 cd D:\Github\Projects
 # フォルダが存在する場合は削除
-if (-Not (Test-Path -Path .\FsFileUtil)){rmdir .\FsFileUtil}
+if (Test-Path -Path .\FsFileUtil){rm -Recurse -Force .\FsFileUtil}
 # クローン実行
 git clone https://github.com/hide104y/FsFileUtil.git
 ```
@@ -160,7 +160,7 @@ dotnet publish .\FsFileUtil\FsFileUtil\FsFileUtil.csproj -c Release -o D:\Github
 # CD
 cd D:\Github\Projects
 # フォルダが存在する場合は削除
-if (-Not (Test-Path -Path .\FsFileUtil)){rmdir .\FsFileUtil}
+if (Test-Path -Path .\FsFileUtil){rm -Recurse -Force .\FsFileUtil}
 # クローン実行
 git clone -b dotnet10 https://github.com/hide104y/FsFileUtil.git
 ```
